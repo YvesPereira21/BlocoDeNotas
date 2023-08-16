@@ -27,7 +27,9 @@ public class Anotacao extends BlocoDeNota{
     }
     public void isRemover() {
         if (remover != false){
+            //não pode print
             System.out.println("Qual o id da anotação que deseja deletar? ");
+            //tem que ser o id
             int anotacaoDeletar = Anotacoes.indexOf(sc.nextInt());
             Anotacoes.remove(anotacaoDeletar);
         }
