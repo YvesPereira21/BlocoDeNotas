@@ -20,25 +20,21 @@ public class Anotacao extends BlocoDeNota{
     public void setTextao(String textoEditado){
         textoEditado = textao;
     }
-    public Anotacao getId(){
-        System.out.println("id que deseja pegar: ");
-        Anotacao pegaId = Anotacoes.get(id - 1);
-        return pegaId;
+    public int getId(){
+        return id;
     }
-    public void isRemover() {
-        if (remover != false){
-            //não pode print
-            System.out.println("Qual o id da anotação que deseja deletar? ");
-            //tem que ser o id
-            int anotacaoDeletar = Anotacoes.indexOf(sc.nextInt());
-            Anotacoes.remove(anotacaoDeletar);
-        }
+    public void setId(int id){
+        this.id = id;
     }
+    public void isRemover(int id) {;
+        Anotacoes.remove(id);
 
-
+    }
 
     public String toString() {
-        return "Id " + id + "\n" + getTextao() + "\n" + data;
+        return "Id: " + id + "\n" + getTextao() + "\n" + data;
     }
+
+}
 
 }
