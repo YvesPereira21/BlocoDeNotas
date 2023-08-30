@@ -23,7 +23,7 @@ public class BlocoDeNota {
         return Anotacoes.get(id - 1);
     }
 
-    public String pesquisarAluno(String textoBuscar){
+    public String pesquisarAnotacao(String textoBuscar){
         String textos = "";
         for (Anotacao anota: Anotacoes) {
             if(anota.getTextao().contains(textoBuscar)){
@@ -33,7 +33,7 @@ public class BlocoDeNota {
         return textos;
     }
 
-    public void deletaNota(int id){
+    public void deletaAnotacao(int id){
         for (Anotacao notaDeletar: Anotacoes) {
             if(notaDeletar.getId() == id - 1){
                 Anotacao a = Anotacoes.get(id - 1);
@@ -43,7 +43,7 @@ public class BlocoDeNota {
         }
     }
 
-    public void recuperaNota(int id){
+    public void recuperaAnotacao(int id){
         for (Anotacao notaDeletada: notasDeletadas) {
             if(notaDeletada.getId() == id){
                 Anotacao a = Anotacoes.get(id - 1);
