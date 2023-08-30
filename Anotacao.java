@@ -10,15 +10,15 @@ public class Anotacao extends BlocoDeNota{
     Scanner sc = new Scanner(System.in);
 
     public Anotacao(String textao, int id){
-
         this.textao = textao;
-        LocalDate data = LocalDate.now();
+        this.data = LocalDate.now();
+        this.id = id;
     }
     public String getTextao(){
         return textao;
     }
     public void setTextao(String textoEditado){
-        textoEditado = textao;
+        textao = textoEditado;
     }
     public int getId(){
         return id;
@@ -37,4 +37,4 @@ public class Anotacao extends BlocoDeNota{
 
 }
 
-}
+
